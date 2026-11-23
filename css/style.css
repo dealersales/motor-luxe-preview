@@ -75,6 +75,9 @@ html, body { overflow-x: hidden; max-width: 100%; }
 
 /* Explicit hero scrim element (the ::before does not paint above #hero) */
 #hero-wrap .hero-scrim { position: absolute; inset: 0; z-index: 2; pointer-events: none;
-    background: linear-gradient(90deg, rgba(0,0,0,.52) 0%, rgba(0,0,0,.34) 32%,
-                rgba(0,0,0,.12) 62%, rgba(0,0,0,0) 100%); }
-#hero-wrap .hero-caption h1, #hero-wrap .hero-caption p { text-shadow: 0 2px 14px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.6); }
+    background: linear-gradient(90deg, rgba(0,0,0,.42) 0%, rgba(0,0,0,.22) 18%,
+                rgba(0,0,0,.06) 34%, rgba(0,0,0,0) 50%); }
+#hero-wrap .hero-caption h1, #hero-wrap .hero-caption p {
+    text-shadow: 0 2px 16px rgba(0,0,0,.85), 0 1px 3px rgba(0,0,0,.7); }
+/* the template renders the sub-copy at 75% opacity; on a bright photo that is what fails */
+#hero-wrap .hero-caption p { opacity: 1 !important; }
